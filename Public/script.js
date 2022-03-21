@@ -1,4 +1,5 @@
 
+
 // ---- Pegando as variaveis do meu body ---- //
 let nome_display = document.getElementById('nome_html');
 let tamanho_display = document.getElementById('tamanho_html');
@@ -38,4 +39,15 @@ function pega_valores(){
     fetch('/api',options)
     nome_display = document.getElementById('nome_html').value = '';
     tamanho_display = document.getElementById('tamanho_html').value = '';
+
+
+}
+
+function recebe_valores(){
+
+    fetch('/api',)
+        .then(response => response.json())
+        .then(response => {
+            response.data;
+        })
 }
