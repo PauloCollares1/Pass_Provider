@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador Senhas</title>
+</head>
+<body>
+
+    <header> 
+        <h1>header</h1>
+    </header>
+
+    <form method="POST" action="/gerador"  class="d-flex flex-column align-items-center">
+        <h1>Gerador de senha</h1>
+        <label><b>Qual o nome dessa senha?</b></label>
+        <div>
+            <input type="text" name="nome_html" min="1" maxlength="30" placeholder="Ex: Netflix" required />
+        </div>
+        <br>
+        <div class="d-flex flex-column">
+            <label class="mt-10 mb-1"><b>Qual o tamanho da senha?</b></label>
+            <input type="number" name="tamanho_html" placeholder="Ex: 10" min="6" max="30" required />
+        </div>
+        <div class="flex">
+            <input type="checkbox" name="minuscula_html" class="form-check-input" checked><label for="scales">Letra minuscula</label>
+            <input type="checkbox" name="maiuscula_html" class="form-check-input" checked><label for="scales">Letra maiuscula</label>
+            <input type="checkbox" name="simbolos_html" class="form-check-input" checked><label for="scales">Simbolos</label>
+            <input type="checkbox" name="numeros_html" class="form-check-input" checked><label for="scales">numeros</label>
+        </div>
+        <br>
+        <button class="btn btn-info">Gerar senha</button>
+    </form>
+
+    <footer>
+        <h1>footer</h1>
+    </footer>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
