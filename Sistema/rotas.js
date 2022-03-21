@@ -20,8 +20,9 @@ rota.post('/api', express.json(), (req, res) => {
 
 rota.get('/api', (req, res) => {
 
-    const teste = "toma essa aqui otario";
-    res.send('teste');
+    const teste = "Toma essa aqui otario";
+    console.log("esse é o teste: ",teste);
+    res.json(teste);
 });
 
 

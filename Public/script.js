@@ -8,18 +8,10 @@ let maiuscula_display = document.getElementById('maiuscula_html');
 let simbolos_display = document.getElementById('simbolos_html');
 let numeros_display = document.getElementById('numeros_html');
 
+// ---- levando as variaveis para o body ---- //
+let imprime_valores_display = document.getElementById('imprime_valores');
 
-function verificador(){
-
-    if(nome_display.value == "" || tamanho_display == "" ){
-        alert("Você esqueceu um campo vazio, favor verificar");
-        location.reload();
-    }
-    else{
-        return pega_valores();
-    }
-}
-
+// ---- funções ---- //
 function pega_valores(){
 
     const formulario = { 
@@ -40,14 +32,17 @@ function pega_valores(){
     nome_display = document.getElementById('nome_html').value = '';
     tamanho_display = document.getElementById('tamanho_html').value = '';
 
-
+    recebe_valores();
 }
 
 function recebe_valores(){
 
-    fetch('/api',)
+    fetch('/api')
         .then(response => response.json())
         .then(response => {
-            response.data;
+            let add_html = (`<div>` + response +`</div>`)
+
+            imprime_valores_display.insertAdjacentHTML('beforeend', add_html)
+            // dessa forma ele não aceita mais de um click:imprime_valores_display.innerHTML = add_html
         })
 }
