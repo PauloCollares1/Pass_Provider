@@ -12,26 +12,25 @@
         <h1>header</h1>
     </header>
 
-    <form method="POST" action="/gerador"  class="d-flex flex-column align-items-center">
         <h1>Gerador de senha</h1>
-        <label><b>Qual o nome dessa senha?</b></label>
         <div>
-            <input type="text" name="nome_html" min="1" maxlength="30" placeholder="Ex: Netflix" required />
+            <label><b>Qual o nome dessa senha?</b></label>
+            <input type="text" id="nome_html" min="1" maxlength="30" placeholder="Ex: Netflix" required />
         </div>
         <br>
         <div class="d-flex flex-column">
             <label class="mt-10 mb-1"><b>Qual o tamanho da senha?</b></label>
-            <input type="number" name="tamanho_html" placeholder="Ex: 10" min="6" max="30" required />
+            <input type="number" id="tamanho_html" placeholder="Ex: 10" min="6" max="30" required />
         </div>
         <div class="flex">
-            <input type="checkbox" name="minuscula_html" class="form-check-input" checked><label for="scales">Letra minuscula</label>
-            <input type="checkbox" name="maiuscula_html" class="form-check-input" checked><label for="scales">Letra maiuscula</label>
-            <input type="checkbox" name="simbolos_html" class="form-check-input" checked><label for="scales">Simbolos</label>
-            <input type="checkbox" name="numeros_html" class="form-check-input" checked><label for="scales">numeros</label>
+            <input type="checkbox" id="minuscula_html" class="form-check-input" checked><label for="scales">Letra minuscula</label>
+            <input type="checkbox" id="maiuscula_html" class="form-check-input" checked><label for="scales">Letra maiuscula</label>
+            <input type="checkbox" id="simbolos_html" class="form-check-input" checked><label for="scales">Simbolos</label>
+            <input type="checkbox" id="numeros_html" class="form-check-input" checked><label for="scales">numeros</label>
         </div>
         <br>
-        <button class="btn btn-info">Gerar senha</button>
-    </form>
+        <button class="btn btn-info" onclick="verificador()">Gerar senha</button>
+
 
     <footer>
         <h1>footer</h1>
