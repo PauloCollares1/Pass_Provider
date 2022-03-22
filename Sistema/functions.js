@@ -17,7 +17,6 @@ const alfabeto_simbolos = ['!','@','#','$','%','&','*'];
 
 // --- Função principal --- //
 
-
 async function embaralha(nome, tamanho, minuscula, maiuscula, simbolo, numeros){
 
     let senha = [];
@@ -217,7 +216,5 @@ async function embaralha(nome, tamanho, minuscula, maiuscula, simbolo, numeros){
         console.log('Arquivo gerado com sucesso');
     }); */
 }
-
-
 
 module.exports = {conversao, embaralha}

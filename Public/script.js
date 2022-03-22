@@ -8,8 +8,6 @@ let maiuscula_display = true;
 let simbolos_display = true;
 let numeros_display = true;
 
-
-
 // ---- levando as variaveis para o body ---- //
 let imprime_valores_display = document.getElementById('imprime_valores');
 
