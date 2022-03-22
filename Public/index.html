@@ -5,30 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilo.css">
+    <script src="https://kit.fontawesome.com/cc1680a685.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <title>Gerador Senhas</title>
 </head>
 <body>
 
-    <header> 
-        <h1>header</h1>
+    <header class="header"> 
+        <a href="/"><img class="logo" src="./assets/locker.png" alt="teste"></a>
+        <nav>
+            <ul class="header-list">
+                <li><a href="https://www.linkedin.com/in/paulo-collares/">Eu</a></li>
+                <li><a href="https://github.com/PauloCollares1/Pass_Provider"><i class="fa-brands fa-github-square fa-lg"></a></i></li>
+            </ul>
+        </nav>
     </header>
 
-    <h1>Gerador de senha</h1>
-        <div>
-            <label><b>Qual o nome dessa senha?</b></label>
+    <h1 class="titulo">Gerador de senha</h1>
+
+    <section class="section_1">
+        <div class="section_1_divnome">
+            <label><b>Qual o nome dessa senha?</b></label><br>
             <input type="text" id="nome_html" min="1" maxlength="30" placeholder="Ex: Netflix" required />
         </div>
-        <br>
-        <div class="d-flex flex-column">
-            <label class="mt-10 mb-1"><b>Qual o tamanho da senha?</b></label>
+        <div class="section_1_divnumero">
+            <label><b>Qual o tamanho da senha?</b></label><br>
             <input type="number" id="tamanho_html" placeholder="Ex: 10" min="6" max="30" required />
         </div>
-        <br>
-        <button class="btn btn-info" onclick="pega_valores()">Gerar senha</button>
-        <div id="imprime_valores"></div>
+        <button class="gerar_senha" onclick="pega_valores()"><b>Gerar senha</b></button>
+        <div id="imprime_valores">
+            <div id="botao"></div>
+        </div>
+    </section>
 
-    <footer>
-        <h1>footer</h1>
+
+
+    <footer class="rodape">
+        <h3>That's all folks !</h3>
+        <h5>Powered by: PauloDev1</h5>
     </footer>
 
 
