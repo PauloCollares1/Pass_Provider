@@ -3,7 +3,12 @@ const express = require('express');
 rota = express.Router();
 
 
-rota.post('/api', express.json(), (req, res) => {
+rota.get('/', (req, res) => {
+
+    res.json(functions.conversao);
+});
+
+rota.post('/', express.json(), (req, res) => {
 
     let nome = req.body.nome_script;
     let tamanho = req.body.tamanho_script;
@@ -12,18 +17,11 @@ rota.post('/api', express.json(), (req, res) => {
     let simbolos = req.body.simbolos_script ;
     let numeros = req.body.numeros_script;
 
+    functions.embaralha(nome, tamanho, minuscula, maiuscula, simbolos, numeros);
 
-    console.log(nome,tamanho,minuscula,maiuscula,simbolos,numeros)
+    console.log(minuscula,maiuscula,simbolos,numeros)
 
     res.end()
 });
-
-rota.get('/api', (req, res) => {
-
-    const teste = "Toma essa aqui otario";
-    console.log("esse é o teste: ",teste);
-    res.json(teste);
-});
-
 
 module.exports = { rota }

@@ -2,8 +2,7 @@ const fs = require('fs');
 
 
 // --- Construtores auxiliares --- //
-let lista = [];
-
+let conversao = {};
 
 const alfabeto_pequeno = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q"
 ,"r","s","t","u","v","w","x","y","z"];
@@ -204,12 +203,15 @@ async function embaralha(nome, tamanho, minuscula, maiuscula, simbolo, numeros){
         console.log("A opção escolhida não é vlálida");
     }
 
+    // Juntando o arrai de senha em uma string só
     let senha_concat = senha.join('');
 
-    lista.push({"nome":nome, "senha":senha_concat});
-    let meu_texto = JSON.stringify(lista);
+    // Construindo o objeto global que declarei lá em cima
+    conversao.nome = nome;
+    conversao.senha = senha_concat
 
-/*     // Escrevendo arquvo //
+/*     let meu_texto = JSON.stringify(lista);
+     // Escrevendo arquvo //
     fs.writeFile('./Senha Gerada.txt', meu_texto, (err) => {
         if(err) return console.log(err);
         console.log('Arquivo gerado com sucesso');
@@ -218,10 +220,4 @@ async function embaralha(nome, tamanho, minuscula, maiuscula, simbolo, numeros){
 
 
 
-
-
-
-
-
-
-module.exports = {lista, embaralha}
+module.exports = {conversao, embaralha}

@@ -10,7 +10,7 @@ const server = http.Server(app);
 app.use('/', express.static('Public'));
 
 // ---- Setando as rotas ---- //
-app.use('/', rotas.rota)
+app.use('/api', rotas.rota)
 
 
 // ---- Conectando o servidor ---- //
