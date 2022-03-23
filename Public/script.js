@@ -11,6 +11,9 @@ let numeros_display = true;
 let imprime_valores_display = document.getElementById('imprime_valores');
 let imprime_botao = document.getElementById('botao');
 
+// ---- Darkmode ---- // 
+let darkmode = document.getElementById('darkmode');
+
 var esseaqui = false;
 
 // ---- funções ---- //
@@ -52,16 +55,26 @@ function recebe_valores(){
         
 }
 
+function Limpar(){
+    location.reload()
+}
 
 function meubotao(){
 
     if(esseaqui === false){
-        esseaqui = (`<button class="gerar_senha" onclick="pega_valores()">Limpar</button>`)
+        esseaqui = (`<button class="gerar_senha" onclick="Limpar()"><b>Limpar</b></button>`+
+                    `<br><button class="gerar_senha" onclick="Limpar()"><b>Me manda no ZAP!</b></button>`)
         imprime_botao.insertAdjacentHTML('beforeend', esseaqui)
         console.log('eu entrei aqui')
         return esseaqui = true;
     }
 }
+
+darkmode.addEventListener('change', (e) => {
+    console.log(e.target.checked)
+    document.body.classList.toggle("dark", e.target.checked);
+})
+
 
 
 

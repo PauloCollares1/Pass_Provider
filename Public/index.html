@@ -17,8 +17,11 @@
         <a href="/"><img class="logo" src="./assets/locker.png" alt="teste"></a>
         <nav>
             <ul class="header-list">
+                
                 <li><a href="https://www.linkedin.com/in/paulo-collares/">Eu</a></li>
                 <li><a href="https://github.com/PauloCollares1/Pass_Provider"><i class="fa-brands fa-github-square fa-lg"></a></i></li>
+                <li><input type="checkbox" id="darkmode" name="darkmode" class="darkmode"></input>
+                <label for="darkmode" class="lampada"><i class="fa-regular fa-lightbulb"></i></label></li>
             </ul>
         </nav>
     </header>
@@ -35,12 +38,10 @@
             <input type="number" id="tamanho_html" placeholder="Ex: 10" min="6" max="30" required />
         </div>
         <button class="gerar_senha" onclick="pega_valores()"><b>Gerar senha</b></button>
-        <div id="imprime_valores">
+        <div id="imprime_valores" class="imprime_valores">
             <div id="botao"></div>
         </div>
     </section>
-
-
 
     <footer class="rodape">
         <h3>That's all folks !</h3>
