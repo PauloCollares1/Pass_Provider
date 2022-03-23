@@ -1,21 +1,21 @@
 
-// ---- Pegando as variaveis do meu body ---- //
+// ---- Pegando todas as variaveis do meu body ---- //
 let nome_display = document.getElementById('nome_html');
 let tamanho_display = document.getElementById('tamanho_html');
+let numeros_display = document.getElementById('numeros_html');
+let simbolos_display = document.getElementById('simbolos_html');
 let minuscula_display = document.getElementById('minuscula_html');
 let maiuscula_display = document.getElementById('maiuscula_html');
-let simbolos_display = document.getElementById('simbolos_html');
-let numeros_display = document.getElementById('numeros_html');
 
-
-// ---- levando as variaveis para o body ---- //
+// ---- adicionando HTML no body ---- //
 let imprime_valores_display = document.getElementById('imprime_valores');
-let imprime_botao = document.getElementById('botao');
+let revela_botoes = document.getElementById('botoes_extras');
+var check_unico_botoes = false;
 
 // ---- Darkmode ---- // 
 let darkmode = document.getElementById('darkmode');
 
-var esseaqui = false;
+
 
 // ---- funções ---- //
 function pega_valores(){
@@ -35,7 +35,7 @@ function pega_valores(){
     }
     fetch('/api',options)
     recebe_valores();
-    meubotao();
+    botes_extras();
     // Tive que comentar as 2 linhas pois ambas estavam enviando nulo pra o objeto
     //nome_display = document.getElementById('nome_html').value = '';
     //tamanho_display = document.getElementById('tamanho_html').value = '';  
@@ -52,25 +52,25 @@ function recebe_valores(){
 
                 imprime_valores_display.insertAdjacentHTML('afterbegin', add_html)
                 // dessa forma ele não aceita mais de um click: //imprime_valores_display.innerHTML = add_html
-        })
-        
+        }
+    )     
 }
 
 function Limpar(){
     location.reload()
 }
 
-function meubotao(){
+function botes_extras(){
 
-    if(esseaqui === false){
-        esseaqui = (`<button class="gerar_senha" onclick="Limpar()"><b>Limpar</b></button>`+
+    if(check_unico_botoes === false){
+        check_unico_botoes = (`<button class="gerar_senha" onclick="Limpar()"><b>Limpar</b></button>`+
                     `<br><button class="gerar_senha" onclick="Limpar()"><b>Me manda no ZAP!</b></button>`)
-        imprime_botao.insertAdjacentHTML('beforeend', esseaqui)
-        return esseaqui = true;
+                revela_botoes.insertAdjacentHTML('beforeend', check_unico_botoes)
+        return check_unico_botoes = true;
     }
 }
 
-
+// ---- Atribuindo escutador aos meus checkbox ---- //
 let minuscula = minuscula_display.addEventListener('change', (e) => {
     minuscula = e.target.checked;
     console.log("aaa: " + e.target.checked)
@@ -87,6 +87,7 @@ let simbolos = simbolos_display.addEventListener('change', (e) => {
     simbolos = e.target.checked;
     console.log("!@#: " + e.target.checked)
 })
+// ---- Setando valor inicial aos meus checkbox ---- //
 if(!minuscula && !maiuscula && !numeros && !simbolos){
     minuscula = true;
     maiuscula=true,
@@ -94,9 +95,8 @@ if(!minuscula && !maiuscula && !numeros && !simbolos){
     simbolos = true;
 }
 
-
+// ---- Atribuindo a classe dark a meu Body para o darmode ----//
 darkmode.addEventListener('change', (e) => {
-
     document.body.classList.toggle("dark", e.target.checked);
 })
 
