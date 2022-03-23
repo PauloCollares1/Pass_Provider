@@ -37,6 +37,12 @@
             <label><b>Qual o tamanho da senha?</b></label><br>
             <input type="number" id="tamanho_html" placeholder="Ex: 10" min="6" max="30" required />
         </div>
+        <div class="opcoes">
+            <input type="checkbox" id="minuscula_html" name="minuscula_html" class="form-check-input" checked><label for="scales">aaa</label>
+            <input type="checkbox" id="maiuscula_html" name="maiuscula_html" class="form-check-input" checked><label for="scales">AAA</label>
+            <input type="checkbox" id="numeros_html" name="numeros_html" class="form-check-input" checked><label for="scales">123</label>
+            <input type="checkbox" id="simbolos_html" name="simbolos_html" class="form-check-input" checked><label for="scales">!@#</label>
+        </div>
         <button class="gerar_senha" onclick="pega_valores()"><b>Gerar senha</b></button>
         <div id="imprime_valores" class="imprime_valores">
             <div id="botao"></div>

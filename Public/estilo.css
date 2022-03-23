@@ -49,7 +49,6 @@ a{
     height: 0px;
 }
 
-
 /* ---------- Body ----------- */
 .titulo{
     font-family: 'Nunito', sans-serif;
@@ -64,10 +63,17 @@ a{
 .section_1_divnome, .section_1_divnumero{
     margin-top: 10px;
 }
-input{
+#nome_html, #tamanho_html{
     width: 220px;
     height: 20px;
     border-radius: 5px;
+}
+.opcoes {
+    display: block;
+}
+.form-check-input{
+    width: 20px;
+    height: 20px;
 }
 .gerar_senha{
     background-color: aquamarine;
