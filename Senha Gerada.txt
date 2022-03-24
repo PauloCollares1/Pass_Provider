@@ -1,0 +1,6 @@
+O nome da senha é: teste 
+E a senha é: teste
+----------
+O nome da senha é: teste 
+E a senha é: teste
+----------

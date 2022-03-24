@@ -207,14 +207,22 @@ async function embaralha(nome, tamanho, minuscula, maiuscula, simbolo, numeros){
 
     // Construindo o objeto global que declarei lá em cima
     conversao.nome = nome;
-    conversao.senha = senha_concat
+    conversao.senha = senha_concat;
 
-/*     let meu_texto = JSON.stringify(lista);
-     // Escrevendo arquvo //
-    fs.writeFile('./Senha Gerada.txt', meu_texto, (err) => {
+    //gerar_arquivo(nome,senha_concat)
+}
+
+// ---- Gerando arquivo de senha ---- //
+//OBS: não consigo gerar arquivos pra download individualmente
+// a senha sempre vai junto pra todo mundo, por isso comentei
+/* function gerar_arquivo(nome, senha){
+
+    let senha_formatada = (`O nome da senha é: ${nome} \nE a senha é: ${senha}\n----------\n`);
+    
+    fs.writeFile('./Senha Gerada.txt', senha_formatada,{flag:'a+'} , (err) => {
         if(err) return console.log(err);
         console.log('Arquivo gerado com sucesso');
-    }); */
-}
+    });
+} */
 
 module.exports = {conversao, embaralha}

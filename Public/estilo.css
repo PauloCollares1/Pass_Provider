@@ -87,7 +87,27 @@ a{
 }
 .imprime_valores{
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.alerta_filho{
+    display: flex;
+    color: black;
+    width: 280px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: aquamarine;
+    opacity: 0.6;
+    justify-content: center;
+
+    
+
+}
+
 
 /* ---------- Rodapé----------- */
 .rodape{
@@ -117,6 +137,10 @@ a:hover{
     width: 245px;
     height: 35px;
     transition: ease-out 0.5s;
+}
+.gerar_senha:active {
+    transform: translateX(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 ::placeholder{
     text-align: center;

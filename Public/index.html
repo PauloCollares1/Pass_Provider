@@ -31,7 +31,7 @@
     <section class="section_1">
         <div class="section_1_divnome">
             <label><b>Qual o nome dessa senha?</b></label><br>
-            <input type="text" id="nome_html" min="1" maxlength="30" placeholder="Ex: Netflix" required />
+            <input type="text" id="nome_html" min="3" maxlength="30" placeholder="Ex: Netflix" required />
         </div>
         <div class="section_1_divnumero">
             <label><b>Qual o tamanho da senha?</b></label><br>
@@ -43,9 +43,10 @@
             <input type="checkbox" id="numeros_html" name="numeros_html" class="form-check-input" checked><label for="scales">123</label>
             <input type="checkbox" id="simbolos_html" name="simbolos_html" class="form-check-input" checked><label for="scales">!@#</label>
         </div>
-        <button class="gerar_senha" onclick="pega_valores()"><b>Gerar senha</b></button>
+        <button class="gerar_senha" onclick="autenticador()"><b>Gerar senha</b></button>
         <div id="imprime_valores" class="imprime_valores">
             <div id="botoes_extras"></div>
+            <div id="alerta_div"></div>
         </div>
     </section>
 

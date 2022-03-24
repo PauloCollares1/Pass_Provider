@@ -1,12 +1,15 @@
 const functions = require('./functions.js')
 const express = require('express');
 rota = express.Router();
+const fs = require('fs');
+
 
 
 rota.get('/', (req, res) => {
 
     res.json(functions.conversao);
 });
+
 
 rota.post('/', express.json(), (req, res) => {
 
