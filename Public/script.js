@@ -33,7 +33,7 @@ function autenticador(){
     }else if(!tamanho_display.value){
         alert('Preencha o campo ( Tamanho ) para prosseguir \n Apenas valor numério entre 6 e 30')
         location.reload();
-    }else if((minuscula && maiuscula && simbolos && numeros) == false){
+    }else if(minuscula == false && maiuscula == false && simbolos == false && numeros == false){
         alert('Pelo menos uma opção de caractere tem que está marcada')
         location.reload();
     }else if(tamanho_display.value < 6 || tamanho_display.value > 30){
