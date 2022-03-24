@@ -4,6 +4,7 @@ const http = require('http');
 
 // ---- Settings ---- //
 const app = express();
+require("dotenv").config();
 const server = http.Server(app);
 
 // ---- Página estática ---- //
@@ -14,4 +15,4 @@ app.use('/api', rotas.rota)
 
 
 // ---- Conectando o servidor ---- //
-server.listen(5000, () => {console.log("Servidor rodando...")})
+server.listen(process.env.PORT || 5000, () => {console.log("Servidor rodando...")})

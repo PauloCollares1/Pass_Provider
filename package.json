@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/PauloCollares1/Pass_Provider#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.3"
   }
 }
